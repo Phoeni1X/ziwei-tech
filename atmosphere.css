@@ -1,0 +1,195 @@
+/* Photo-backed chapters. Original hero and factual product imagery are preserved. */
+.about, .product-section, .applications, .research, .contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color-scheme: dark;
+  color: #f1f5ff;
+}
+.about .section-label, .product-section .section-label,
+.applications .section-label, .research .section-label, .contact .section-label {
+  color: #c2b4f4;
+  border-color: #c3d7ff35;
+}
+.about .section-label span:last-child, .product-section .section-label span:last-child,
+.applications .section-label span:last-child, .research .section-label span:last-child,
+.contact .section-label span:last-child { color: #b1c3de; }
+
+/* The chamber's blue absorbers provide a real engineering setting. */
+.about {
+  background: linear-gradient(90deg, #071b35a6, #091c36eb 61%, #101b37f0),
+    url('assets/lab.webp') left 48% / cover no-repeat;
+}
+.about::before {
+  background: linear-gradient(180deg, #080b1499, transparent 30%, #10284166);
+  mask-image: none;
+}
+.about-grid { gap: 90px; }
+.about h2 { text-shadow: 0 2px 30px #001326; }
+.about h2 .muted { color: #aec9ff; }
+.about .chapter-kicker, .about .brand-english { color: #bbceea; }
+.about-copy .lead { color: #f1f6ff; }
+.about-copy p { color: #c6d4e7; }
+.principles > div {
+  background: linear-gradient(130deg, #46679652, #112641a6);
+  border-color: #a4c6fb40;
+  box-shadow: 0 12px 35px #00112c1a;
+  backdrop-filter: blur(8px);
+}
+.principles strong { color: #edf5ff; }
+.principles p { color: #bfcee5; }
+.principle-index { color: #b2cafa; }
+
+/* A blue circuit backdrop runs behind the catalogue; data keeps its own surface. */
+.product-section {
+  background: radial-gradient(ellipse at 100% 45%, #35486d, transparent 55%),
+    linear-gradient(145deg, #102943, #18263f 48%, #222744);
+}
+.product-section::before, .product-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.product-section::before {
+  inset: 0 0 auto 18%;
+  height: 1050px;
+  background: linear-gradient(90deg, #102943, #12274055),
+    linear-gradient(0deg, #182a43, transparent 60%),
+    url('assets/array-ka.webp') center top / cover no-repeat;
+  opacity: .32;
+}
+.product-section::after {
+  inset: 0;
+  background-image: linear-gradient(#b3c9f008 1px, transparent 1px),
+    linear-gradient(90deg, #b3c9f008 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.product-section .section-heading p, .array-heading p,
+.spec-heading > span, .spec-note, .product-cta p { color: #becce2; }
+.product-jumps a { color: #dce9ff; background: #6381b52b; border-color: #95b9e966; }
+.product-jumps a:hover { background: #6381b55c; }
+.bridge-feature {
+  background: linear-gradient(120deg, #203d59ed, #304864d9);
+  border-color: #a1bde33d;
+  box-shadow: 0 22px 70px #020c2029;
+}
+.bridge-intro p { color: #c9d6e7; }
+.bridge-intro p strong { color: #ecf6ff; }
+.product-section .small-label { color: #b1c8f0; }
+.feature-tags span { color: #d1dff6; background: #6080af25; border-color: #a0bfec40; }
+.product-section .text-link, .research .text-link { color: #c5d4ff; border-color: #a7bcf080; }
+.product-section .text-link:hover, .research .text-link:hover { color: #fff; }
+.bridge-feature figure {
+  background: radial-gradient(ellipse, #b9d4efbf, #7b9ab142 62%, transparent 75%);
+}
+.bridge-feature figcaption { color: #d0dded; }
+.bridge-variants figure {
+  color-scheme: light;
+  background: linear-gradient(140deg, #e1edf6, #ccdce9);
+  border-color: #d4e5f080;
+}
+.bridge-variants figcaption span { color: #50617b; }
+.table-scroll { color-scheme: light; background: #eaf0f7; border-color: #9fb5d066; }
+thead th { background: #cddced; }
+th, td { border-color: #bccadd88; }
+.array-heading {
+  position: relative;
+  isolation: isolate;
+  min-height: 245px;
+  align-items: center;
+  padding: 38px;
+  border: 1px solid #a7b9dd40;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #222f4fee, #232d4bc2),
+    url('assets/array-ku512.webp') right 42% / cover no-repeat;
+}
+.antenna-card { background: #dfe7f1; color-scheme: light; border-color: #c9d5e970; }
+.antenna-image { background: linear-gradient(135deg, #cddbec, #e8ebf2); }
+.antenna-copy p { color: #53627b; }
+.product-band { color: #68567d; }
+.more-products { background: #52618326; border-color: #9cb2dc40; }
+.more-products summary { color: #d8e3fa; }
+.additional-grid article { color-scheme: light; background: #e1e8f2; }
+.additional-grid p { color: #5d6980; }
+.satellite-features { background: #6781b02b; border: 1px solid #9cb2dc30; }
+.satellite-features h4 { color: #e8edff; }
+.satellite-features li { color: #cbd7ed; border-color: #b1a8ec; }
+.product-cta .secondary, .media-card .secondary, .brochure-box .secondary {
+  color: #e5e8ff;
+  border-color: #b7b1e88c;
+  background: #9986cd1c;
+}
+.product-cta .secondary:hover, .media-card .secondary:hover,
+.brochure-box .secondary:hover { background: #a895da3b; }
+
+/* Earth seen from orbit links terrestrial applications to satellite terminals. */
+.applications {
+  background: linear-gradient(90deg, #071932b3, #0b1c39a6),
+    linear-gradient(0deg, #071426e6, transparent 70%),
+    url('hero.png') center 68% / cover no-repeat;
+}
+.applications .section-heading p { color: #c7d5ea; }
+.application-grid article {
+  background: linear-gradient(145deg, #4c6c934f, #112944b8);
+  border-color: #accbf24f;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 18px 40px #03102e26;
+}
+.application-number { color: #b0caf1; }
+.application-grid p { color: #c6d6ea; }
+.application-tag { color: #d5e5ff; border-color: #aec7ef40; }
+.application-note { color: #b1c1d8; }
+
+.research {
+  background: linear-gradient(100deg, #172f46f5, #183952ed 55%, #153b4cdb),
+    url('assets/testing.webp') center / cover no-repeat;
+}
+.research-copy > p, .research-point p { color: #c3d6e4; }
+.research-point { border-color: #b9d8e733; }
+.research-point > span { color: #afc8eb; }
+.research-images figure { border: 1px solid #b7d6eb40; box-shadow: 0 18px 45px #031d3933; }
+.media-card {
+  background: linear-gradient(110deg, #3a597e80, #3b416480);
+  border-color: #a7c0e047;
+}
+.media-card h3 { color: #eff3ff; }
+.media-card p { color: #c4d2e7; }
+.media-card > small { color: #b4c6dd; }
+.media-card .small-label { color: #b8cafa; }
+
+.vision {
+  background-image: linear-gradient(105deg, #151c49b8, #29205388 45%, #14254688), url('hero.png');
+}
+.contact {
+  background: linear-gradient(110deg, #172139ed, #25244cce 58%, #252850b8),
+    url('hero.png') 75% center / cover no-repeat;
+}
+.contact-intro, .contact-list dt { color: #c0cbe1; }
+.contact-list dd { color: #edf2ff; }
+.contact-list > div { border-color: #b0bdd533; }
+.contact-list a:hover { color: #d2c0ff; }
+.qr-grid { background: #67729b29; border-color: #b9c4ed40; backdrop-filter: blur(8px); }
+.qr-grid figcaption { color: #dce6fc; }
+.brochure-box { background: linear-gradient(130deg, #65639042, #454b792e); border-color: #b9c4ed40; }
+.brochure-box > span, .brochure-box p { color: #c5cbe3; }
+
+@media (max-width: 1000px) {
+  .about-grid { gap: 40px; }
+  .array-heading { padding: 28px; }
+}
+@media (max-width: 640px) {
+  .about {
+    background-image: linear-gradient(90deg, #071b357d, #091c36b8), url('assets/lab.webp');
+    background-position: center, 20% center;
+  }
+  .about-grid { gap: 20px; }
+  .about-copy { padding: 22px 20px 4px; background: #0d2347bd; border: 1px solid #aac5e72b; border-radius: 8px; }
+  .product-section::before { left: 0; height: 750px; opacity: .26; }
+  .array-heading { padding: 26px 22px; min-height: 280px; }
+  .applications { background-position: center, center, 64% center; }
+  .application-grid article { background: linear-gradient(145deg, #345174b3, #112944d9); }
+  .application-grid h3 { font-size: 18px; }
+  .contact { background-position: center, 65% center; }
+}

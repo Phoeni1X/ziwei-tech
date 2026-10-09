@@ -1,0 +1,200 @@
+/* The original orbital hero is preserved. Each following chapter has its own surface. */
+.about {
+  color-scheme: light;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #192a49;
+  background:
+    radial-gradient(ellipse at 4% 22%, #c9e6ffb5, transparent 44%),
+    radial-gradient(ellipse at 96% 80%, #e4d5ffb8, transparent 45%),
+    #f4f7fc;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#486b9a0a 1px, transparent 1px),
+    linear-gradient(90deg, #486b9a0a 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(110deg, #000, transparent 75%);
+}
+.about .section-label,
+.expertise .section-label {
+  color: #645093;
+  border-color: #667c9f33;
+}
+.about .section-label span:last-child,
+.expertise .section-label span:last-child { color: #667691; }
+.about h2 { font-weight: 600; }
+.about h2 .muted { color: #7270b6; }
+.about-copy .lead { color: #263d62; }
+.about-copy p { color: #52617a; }
+.principles {
+  gap: 24px;
+  border: 0;
+  padding-top: 0;
+  margin-top: 58px;
+}
+.principles > div {
+  min-height: 150px;
+  padding: 28px 28px 26px 64px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px #29487707;
+  background: linear-gradient(130deg, #ffffffea, #ffffff80);
+}
+.principles > div::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 26px;
+  width: 35px;
+  height: 3px;
+  background: #779edb;
+}
+.principles > div:nth-child(2)::before { background: #9b83db; }
+.principles > div:nth-child(3)::before { background: #709bb0; }
+.principle-index { left: 27px; top: 33px; color: #7973ad; }
+.principles strong { color: #283e61; }
+.principles p { color: #65748a; line-height: 1.8; }
+
+.expertise {
+  color-scheme: light;
+  color: #192a49;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 100% 0%, #d6e3ff85, transparent 55%),
+    linear-gradient(180deg, #e9eef8, #f6f8fc);
+}
+.expertise .section-heading h2 { font-weight: 600; }
+.expertise .section-heading p { color: #63738b; }
+.business-grid { gap: 28px; }
+.business-card {
+  position: relative;
+  border: 1px solid #c9d9ee;
+  padding: 30px 34px 0;
+  background: linear-gradient(155deg, #d9eaff 0%, #f5faff 40%, #fff 70%);
+  box-shadow: 0 18px 45px #24477c0a;
+  border-radius: 12px;
+  transition: box-shadow .2s, border-color .2s, transform .2s;
+}
+.array-card {
+  background: linear-gradient(155deg, #e6ddff 0%, #f8f5ff 40%, #fff 70%);
+  border-color: #d5cbea;
+}
+.business-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 45px #32477914;
+  border-color: #8d9cc8;
+}
+.card-number { color: #6384ad; font-size: 16px; }
+.tag { color: #5c7291; font-size: 12px; letter-spacing: 1px; }
+.array-card .card-number, .array-card .tag { color: #776198; }
+.signal-diagram, .array-diagram { height: 222px; }
+.signal-node {
+  background: #f6fbff;
+  color: #345c93;
+  border-color: #a2bfe4;
+  box-shadow: 0 6px 22px #5b94d71a;
+  padding: 20px;
+}
+.signal-link { color: #597498; }
+.signal-link i { background: linear-gradient(90deg, #5e8ad14d, #5e8ad1, #5e8ad14d); }
+.array-diagram svg g[fill] { fill: #8d6ac5; }
+.array-diagram svg g[stroke] { stroke: #8764c1; }
+.array-diagram > span { color: #806b9b; }
+.small-label { color: #607698; font-size: 14px; }
+.array-card .small-label { color: #81669f; }
+.card-copy h3 { color: #233c61; font-weight: 600; }
+.array-card h3 { color: #463063; }
+.card-copy > p { color: #60718b; }
+.card-copy details { border-color: #b9c9df80; }
+.card-copy summary { color: #416298; font-weight: 500; }
+.array-card summary { color: #765398; }
+.card-copy details > div { color: #576882; }
+
+.vision {
+  background-color: #1b2050;
+  background-image:
+    linear-gradient(105deg, #151c49ed 0%, #292053cf 45%, #1425469c 100%),
+    url('hero.png');
+  background-position: center, center 60%;
+  background-size: cover;
+  padding-bottom: 118px;
+}
+.vision::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #608cff12, transparent 50%, #bb7cfc26);
+  pointer-events: none;
+}
+.vision-glow {
+  width: 1200px;
+  height: 760px;
+  top: 0;
+  background: radial-gradient(ellipse, #967cf33d, transparent 65%);
+}
+.vision .section-label { border-color: #c1c8fa33; color: #d2c3fb; }
+.vision .section-label span:last-child { color: #aab8dc; }
+.vision-intro { color: #c6c4e0; }
+.vision-description { color: #ccd0e5; }
+.vision h2 { text-shadow: 0 2px 28px #080b1855; }
+.vision h2 .gradient-text {
+  background-image: linear-gradient(100deg, #e0caff, #b8cfff 90%);
+}
+.vision-rule { color: #e0dbf2; }
+.vision-rule span + span::before { background: #bda8dd80; }
+
+.explore {
+  display: block;
+  color-scheme: light;
+  color: #263756;
+  padding: 70px 0;
+  background:
+    radial-gradient(ellipse at 95% 0%, #ded8ff, transparent 60%),
+    linear-gradient(100deg, #f3f7fd, #eef0ff);
+}
+.explore-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.explore .eyebrow { color: #786292; }
+.explore p:last-child { color: #65738c; }
+.explore .secondary {
+  color: #fff;
+  background: #53518d;
+  border-color: #53518d;
+  box-shadow: 0 8px 24px #53518d22;
+}
+.explore .secondary:hover { background: #6661a3; }
+.footer { border-top: 0; }
+
+@media (max-width: 1000px) {
+  .principles { gap: 16px; }
+  .principles > div { padding: 26px 20px 25px; }
+  .principle-index { display: block; position: static; margin-bottom: 11px; }
+  .business-card { padding: 25px 26px 0; }
+  .tag { font-size: 12px; letter-spacing: .4px; }
+}
+@media (max-width: 640px) {
+  .about::before { background-size: 40px 40px; }
+  .principles { margin-top: 28px; gap: 10px; }
+  .principles > div { padding: 20px 12px; min-height: 166px; }
+  .principles > div::before { left: 12px; width: 23px; }
+  .principles strong { font-size: 20px; }
+  .principles p { font-size: 12px; }
+  .business-card { padding: 24px 22px 0; }
+  .card-top { gap: 8px; }
+  .tag { font-size: 12px; letter-spacing: 0; }
+  .signal-diagram, .array-diagram { height: 188px; }
+  .signal-node { padding: 15px; }
+  .vision { padding-bottom: 76px; background-position: center, 62% center; }
+  .explore { padding: 50px 0; }
+  .explore-inner { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .business-card:hover { transform: none; }
+}

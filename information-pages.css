@@ -1,0 +1,42 @@
+/* News, downloads and contact destinations share the company-page shell. */
+.information-page .information-content { padding-top: 58px; padding-bottom: 76px; }
+.information-page .information-content h2 {
+  margin: 0 0 24px;
+  color: #e8eaf4;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+.information-page .information-content p { color: #bbc2d4; font-size: 16px; line-height: 2; }
+.information-page .information-content .information-label { color: var(--about-accent); font-size: 13px; letter-spacing: 1px; margin-bottom: 18px; }
+.information-page .news-story { max-width: 900px; margin-inline: auto; }
+.information-page .news-story .information-source { margin: 28px 0; color: var(--about-muted); font-size: 13px; }
+.information-page .download-document { display: flex; align-items: flex-start; gap: 40px; max-width: 940px; margin-inline: auto; }
+.information-page .document-format { flex-shrink: 0; width: 94px; height: 120px; display: grid; place-items: center; border: 1px solid #b99cff66; color: var(--about-accent); font-size: 23px; letter-spacing: 2px; }
+.information-page .document-detail { min-width: 0; }
+.information-page .download-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 30px; }
+.information-page .information-contact { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 60px; }
+.information-page .information-contact-list { margin: 0; }
+.information-page .information-contact-list > div { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 20px; border-top: 1px solid var(--line); padding: 22px 0; }
+.information-page .information-contact-list dt { color: var(--about-muted); font-size: 14px; line-height: 2; }
+.information-page .information-contact-list dd { margin: 0; font-size: 16px; line-height: 2; color: #e1e4ee; overflow-wrap: anywhere; }
+.information-page .information-contact-list a { display: block; width: fit-content; min-height: 36px; }
+.information-page .information-contact-list a:hover { color: var(--about-accent); }
+.information-page .information-qr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-content: start; padding-top: 8px; }
+.information-page .information-qr figure { margin: 0; }
+.information-page .information-qr img { display: block; width: 100%; height: auto; max-width: 190px; margin-inline: auto; background: white; }
+.information-page .information-qr figcaption { padding-top: 16px; text-align: center; font-size: 14px; line-height: 1.6; color: var(--about-muted); }
+.header nav > a[aria-current="page"] { color: var(--purple); }
+@media (max-width: 1000px) {
+  .information-page .information-contact { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  .information-page .information-qr { max-width: 420px; }
+}
+@media (max-width: 640px) {
+  .information-page .information-content { padding-top: 40px; padding-bottom: 56px; }
+  .information-page .download-document { flex-direction: column; gap: 26px; }
+  .information-page .document-format { width: 70px; height: 86px; font-size: 19px; }
+  .information-page .information-contact-list > div { grid-template-columns: minmax(0, 1fr); gap: 7px; padding: 18px 0; }
+  .information-page .information-qr { gap: 20px; }
+  .information-page .information-qr figcaption { font-size: 12px; }
+}

@@ -1,0 +1,60 @@
+/* Current company identity and culture content. */
+.hero .hero-english-slogan { margin: -8px 0 22px; color: #d2c4ed; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.65; letter-spacing: 1px; }
+.brand-english { overflow-wrap: anywhere; }
+.qr-grid.qr-grid-single { grid-template-columns: minmax(0, 1fr); }
+.qr-grid-single img { max-width: 190px; }
+.information-page .information-qr-single { grid-template-columns: minmax(0, 1fr); align-content: center; }
+.information-page .information-qr-single img { max-width: 220px; }
+.culture-link { display: inline-flex; align-items: center; gap: 20px; min-height: 44px; color: #c4aff5; font-size: 14px; line-height: 1.8; }
+.culture-link:hover { color: #fff; }
+.vision .culture-link { margin-top: 30px; }
+.culture-page .culture-article { max-width: 1100px; }
+.culture-page .culture-brand { padding-bottom: 35px; border-bottom: 1px solid var(--line); }
+.culture-page .culture-brand h2 { color: var(--about-muted); font-size: 15px; margin-bottom: 22px; }
+.culture-page .culture-brand .about-slogan { font-size: clamp(32px, 4.5vw, 55px); margin-bottom: 12px; line-height: 1.5; }
+.culture-page .about-slogan span { color: #c4aff5; }
+.culture-page .about-article .culture-english { margin-top: 0; color: #bfc8df; font-size: clamp(16px, 2vw, 23px); letter-spacing: 1px; }
+.culture-page .culture-mission { max-width: 850px; }
+.culture-page .about-article .culture-mission p { font-size: 20px; line-height: 1.9; }
+.culture-principles, .culture-values { list-style: none; padding: 0; }
+.culture-principles { display: flex; flex-wrap: wrap; gap: 18px 35px; margin: 24px 0 0; color: #d5c9ec; font-size: 18px; letter-spacing: 1px; }
+.culture-values { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 24px; margin: 0; border-block: 1px solid var(--line); }
+.culture-values li { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 23px 0; color: #d7ddea; letter-spacing: .3px; }
+.culture-value-en { font-size: 22px; line-height: 1.6; overflow-wrap: anywhere; }
+.culture-value-zh { font-size: 18px; line-height: 1.7; color: #c6b6e6; }
+.culture-page .about-section.culture-gallery { margin-top: 70px; }
+.culture-gallery-heading { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-bottom: 28px; }
+.culture-page .culture-gallery-heading h2 { margin-bottom: 9px; }
+.culture-page .culture-gallery-heading p { color: var(--about-muted); font-size: 16px; }
+.culture-gallery-heading .culture-link { flex-shrink: 0; }
+.culture-gallery-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 30px 24px; }
+.culture-gallery-card { min-width: 0; grid-column: span 3; margin: 0; }
+.culture-gallery-card:nth-child(n+3):nth-child(-n+5) { grid-column: span 2; }
+.culture-gallery-card > a { display: block; background: #121a28; border-radius: 4px; overflow: hidden; }
+.culture-gallery-card img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.culture-gallery-card figcaption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px 16px; padding-top: 14px; line-height: 1.8; }
+.culture-gallery-card figcaption strong { color: #dce2ed; font-size: 18px; font-weight: 500; }
+.culture-gallery-card figcaption a { display: inline-flex; align-items: center; color: #c8b8e7; font-size: 15px; white-space: nowrap; min-height: 44px; }
+.culture-gallery-card figcaption a:hover { color: #fff; }
+@media (max-width: 900px) {
+  .culture-values { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .culture-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .culture-gallery-card, .culture-gallery-card:nth-child(n+3):nth-child(-n+5) { grid-column: auto; }
+}
+@media (max-width: 640px) {
+  .hero .hero-english-slogan { margin-top: -8px; margin-bottom: 20px; font-size: 15px; letter-spacing: .3px; }
+  .vision-intro { letter-spacing: 1px; line-height: 1.9; }
+  .vision h2 { font-size: clamp(24px, 6.5vw, 32px); }
+  .culture-page .culture-brand .about-slogan span { display: block; }
+  .culture-page .about-article .culture-mission p { font-size: 18px; }
+  .culture-principles { gap: 12px 22px; font-size: 16px; }
+  .culture-values { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+  .culture-values li { padding: 18px 0; gap: 4px; }
+  .culture-value-en { font-size: 18px; }
+  .culture-value-zh { font-size: 16px; }
+  .culture-gallery-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .culture-gallery-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .culture-page .about-section.culture-gallery { margin-top: 45px; }
+  .culture-gallery-card figcaption { padding-top: 10px; }
+  .culture-gallery-card figcaption strong { font-size: 17px; }
+}

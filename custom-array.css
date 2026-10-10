@@ -1,0 +1,62 @@
+/* The requirements form follows the existing dark product pages. */
+.customization-page .about-hero { padding-bottom: 52px; }
+.customization-layout { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.6fr); gap: clamp(40px, 6vw, 90px); padding-block: 58px 88px; }
+.customization-intro { min-width: 0; }
+.customization-eyebrow { display: block; margin-bottom: 20px; color: var(--about-accent); font-size: 13px; letter-spacing: 2px; }
+.customization-intro h2 { margin-bottom: 24px; font-size: clamp(30px, 3vw, 40px); font-weight: 500; line-height: 1.5; }
+.customization-intro p { margin-bottom: 18px; color: #b2b9cc; font-size: 15px; line-height: 1.9; }
+.customization-contact { display: inline-flex; align-items: center; gap: 20px; min-height: 44px; margin-top: 5px; color: var(--about-accent); font-size: 14px; }
+.customization-contact:hover { color: #fff; }
+.custom-array-form { min-width: 0; }
+.form-instructions { margin-bottom: 28px; color: #aeb6ca; font-size: 13px; line-height: 1.8; }
+.custom-array-fields { min-width: 0; border: 0; margin: 0; padding: 0; }
+.custom-array-fields legend { width: 100%; padding: 0 0 17px; margin-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 20px; font-weight: 500; letter-spacing: .5px; }
+.custom-fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 24px; }
+.custom-field { min-width: 0; }
+.custom-company-field { grid-column: 1 / -1; }
+.custom-field label { display: block; margin-bottom: 10px; font-size: 15px; line-height: 1.6; color: #e1e5f0; }
+.field-unit { color: #9ca7bf; font-size: 13px; white-space: nowrap; }
+.custom-field input, .custom-field select { display: block; width: 100%; min-width: 0; min-height: 50px; padding: 12px 14px; border: 1px solid #515a70; border-radius: 3px; color: #f1f2f9; background: #101623; font: inherit; font-size: 15px; line-height: 1.6; transition: border-color .18s; }
+.custom-field select { padding-right: 28px; color-scheme: dark; cursor: pointer; }
+.custom-field input::placeholder { color: #939fb7; opacity: 1; font-size: 13px; }
+.custom-field input:hover, .custom-field select:hover { border-color: #828ca2; }
+.custom-field input:focus-visible, .custom-field select:focus-visible, .custom-consent input:focus-visible { outline: 2px solid var(--about-accent); outline-offset: 3px; }
+.custom-field [aria-invalid="true"] { border-color: #efa4ab; }
+.field-error { display: block; color: #ffbbc2; font-size: 12px; line-height: 1.7; }
+.field-error:not(:empty) { margin-top: 7px; }
+.custom-contact-fields { margin-top: 35px; }
+.custom-consent { margin-top: 29px; }
+.custom-consent label { display: flex; align-items: flex-start; gap: 11px; color: #b8c0d3; font-size: 13px; line-height: 1.9; cursor: pointer; }
+.custom-consent input { flex: 0 0 18px; width: 18px; height: 18px; margin: 4px 0 0; accent-color: #b99cff; cursor: pointer; }
+.custom-consent .field-error { padding-left: 29px; }
+.custom-form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.custom-form-actions .button { min-width: 146px; cursor: pointer; }
+.custom-form-actions .button:disabled { opacity: .65; cursor: default; transform: none; }
+.custom-form-actions [hidden] { display: none; }
+.custom-array-form[aria-busy="true"] .custom-field input, .custom-array-form[aria-busy="true"] .custom-field select { opacity: .7; }
+.custom-form-status { margin: 0; color: #c4cad9; font-size: 14px; line-height: 1.9; overflow-wrap: anywhere; }
+.custom-form-status:not(:empty) { margin-top: 19px; padding: 14px 17px; border-left: 2px solid #7c89a9; background: #111827; }
+.custom-form-status[data-state="error"] { color: #ffd0d5; border-left-color: #e797a6; }
+.custom-form-status[data-state="success"] { color: #d8efe6; border-left-color: #8dcdb6; }
+.custom-form-status:focus { outline: 2px solid var(--about-accent); outline-offset: 3px; }
+.custom-form-note { margin-top: 20px; color: #b8c0d3; font-size: 14px; line-height: 1.9; }
+.custom-form-note a { color: var(--about-accent); text-decoration: underline; text-underline-offset: 4px; }
+.customization-honeypot { display: none; }
+@media (max-width: 900px) {
+  .customization-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .customization-intro h2 br { display: none; }
+  .customization-intro h2 { margin-bottom: 13px; }
+  .customization-intro p { margin-bottom: 10px; }
+  .customization-eyebrow { margin-bottom: 12px; }
+}
+@media (max-width: 640px) {
+  .customization-page .about-hero { padding-bottom: 40px; }
+  .customization-page .about-hero h1 { font-size: clamp(31px, 8.5vw, 42px); letter-spacing: 1px; }
+  .customization-layout { padding-block: 37px 58px; }
+  .custom-fields-grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .customization-intro h2 { font-size: 28px; }
+  .custom-field input, .custom-field select { font-size: 16px; }
+  .custom-form-actions .button { flex: 1 1 auto; }
+  .custom-array-fields legend { margin-bottom: 22px; font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { .custom-field input, .custom-field select { transition: none; } }

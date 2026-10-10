@@ -1,0 +1,70 @@
+/* Shared interior surfaces: keep the existing space imagery and improve long-page reading. */
+body.about-page,
+body.careers-page {
+  --line: rgba(178, 199, 224, .20);
+  background-color: #172a40;
+  background-image: linear-gradient(180deg, #172a40 0, #1b2f47 1100px, #14263b 100%);
+}
+
+.about-page .about-hero,
+.careers-page .careers-hero {
+  background-image:
+    linear-gradient(0deg, #172a40, #172a4000 75%),
+    linear-gradient(90deg, #080b18e8 0%, #080b1890 48%, #080b1840),
+    url('hero.png');
+}
+
+.about-page .about-breadcrumb li + li::before,
+.careers-page .careers-breadcrumb li + li::before { color: #a4b3c9; }
+
+/* Distinguish product data from the surrounding page without adding visual clutter. */
+.product-page .product-spec-scroll {
+  background: #20364e;
+  border-color: #435a74;
+}
+.product-page .product-spec-scroll thead th { background: #2b405b; }
+.product-page .product-spec-scroll tbody tr:nth-child(even) { background: #ffffff04; }
+
+.radar-page .radar-section[aria-labelledby="radar-specifications-title"] {
+  padding: 32px;
+  border: 1px solid #435a74;
+  border-top: 2px solid #8d9bc8;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #243c55, #1e334c);
+}
+.radar-page .radar-spec-grid { gap: 36px 40px; }
+.radar-page .radar-spec-grid h3 {
+  border-color: #49617a;
+  color: #eef3fc;
+}
+.radar-page .radar-spec-group dt { color: #c2cfe0; }
+.radar-page .radar-spec-group dd { color: #f1f5fc; }
+.radar-page .radar-spec-group dl > div { border-color: #ffffff1f; }
+.radar-page .radar-technical-note {
+  align-self: start;
+  padding: 22px 24px;
+  border-left: 2px solid #b8a4ed;
+  background: #2b4058;
+}
+.radar-page .radar-technical-note p { color: #d0dae8; }
+.radar-page .radar-article .radar-note { color: #bdcadd; }
+.radar-page .radar-contact-link { color: #decfff; }
+.radar-page .radar-contact-link:hover { color: #fff; }
+.radar-page .radar-installations {
+  padding-inline: 24px;
+  border-color: #425973;
+  background: #1e334b;
+}
+
+.news-center-page .news-entry.news-featured { background: #20334d; border-color: #596888; }
+.careers-page .career-job { background: #20334a; border-color: #425a74; }
+.careers-page .career-job[open] { border-color: #8a83ae; }
+
+@media (max-width: 760px) {
+  .radar-page .radar-spec-grid { gap: 30px; }
+}
+@media (max-width: 640px) {
+  .radar-page .radar-section[aria-labelledby="radar-specifications-title"] { padding: 23px 16px; }
+  .radar-page .radar-technical-note { padding: 19px 16px; }
+  .radar-page .radar-installations { padding-inline: 16px; }
+}

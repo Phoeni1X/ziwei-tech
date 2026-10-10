@@ -1,0 +1,81 @@
+/* Original, low-contrast orbital artwork. Backgrounds stay still while content reveals. */
+body.home-refined { background: #102034; }
+.home-refined .hero-shade {
+  background: linear-gradient(90deg, #050814d9, #05081459 50%, #05081405 78%),
+    linear-gradient(0deg, #102034, #10203400 32%);
+}
+.home-refined .home-section { isolation: isolate; }
+.home-refined .home-section::before,
+.home-refined .home-section::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.home-refined .home-section::before {
+  background: url('assets/orbit-lines.svg') right center / cover no-repeat;
+  opacity: .75;
+}
+.home-refined .home-about {
+  background: linear-gradient(180deg, #102034, #142a40);
+}
+.home-refined .home-about::after {
+  background: linear-gradient(90deg, #102034e8 15%, #142a407d), url('hero.png') center 62% / cover no-repeat;
+  opacity: .35;
+  mask-image: linear-gradient(180deg, transparent, #000 35%, #000 65%, transparent);
+}
+.home-refined .home-products { background: linear-gradient(180deg, #142a40, #1b334b 48%, #142a40); }
+.home-refined .home-products::before { background-position: right 25%; opacity: .95; }
+.home-refined .home-product-link:hover { border-color: #a8b9d1; background-color: #a6c6ed07; }
+.home-refined .home-applications {
+  background: linear-gradient(180deg, #142a40, #142a40b8 30%, #142a4099 60%, #172b41),
+    url('hero.png') center 68% / cover no-repeat;
+}
+.home-refined .home-applications::before { opacity: .28; }
+.home-refined .home-research { background: linear-gradient(180deg, #172b41, #20344a 55%, #162a40); }
+.home-refined .home-research::before { transform: scaleX(-1); opacity: .6; }
+.home-refined .home-mission {
+  background: linear-gradient(180deg, #162a40, #162a4080 30%, #162a40a8 75%, #14273c),
+    url('hero.png') center 65% / cover no-repeat;
+}
+.home-refined .home-mission::before { opacity: .35; }
+.home-refined .home-contact { background: linear-gradient(180deg, #14273c, #102034); }
+.home-refined .home-contact::before { opacity: .65; }
+.home-refined .home-section-label span:last-child { color: #acbdd3; }
+
+/* Quiet artwork at the page edges adds depth to long product and company pages. */
+body.about-page,
+body.careers-page { position: relative; isolation: isolate; }
+body.about-page::before,
+body.careers-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('assets/orbit-lines.svg') right center / cover no-repeat;
+}
+body.about-page::after,
+body.careers-page::after {
+  content: '';
+  position: fixed;
+  inset: 25% 0 0 30%;
+  z-index: -1;
+  pointer-events: none;
+  background: url('hero.png') 62% 66% / cover no-repeat;
+  opacity: .13;
+  mask-image: linear-gradient(110deg, transparent 10%, #000 90%);
+}
+.about-page .about-tabs,
+.careers-page .careers-tabs { border-bottom-color: #adbed140; }
+.radar-page .radar-section[aria-labelledby="radar-specifications-title"] {
+  background: linear-gradient(125deg, #243c55f5, #1e334ce8);
+  box-shadow: 0 18px 48px #050e191c;
+}
+.radar-page .radar-technical-note { background: linear-gradient(120deg, #2b4058, #2b40589c); }
+
+@media (max-width: 640px) {
+  .home-refined .home-section::before { background-size: auto 100%; opacity: .5; }
+  body.about-page::before, body.careers-page::before { background-size: auto 100%; opacity: .65; }
+  body.about-page::after, body.careers-page::after { inset-inline-start: 15%; opacity: .08; }
+}
+@media print {
+  .home-refined .home-section::before, .home-refined .home-section::after,
+  body.about-page::before, body.careers-page::before,
+  body.about-page::after, body.careers-page::after { display: none; }
+}

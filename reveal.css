@@ -1,0 +1,41 @@
+/* No selector hides content until reveal.js has successfully observed it. */
+.pmt-reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 650ms ease-out, transform 650ms ease-out;
+  transition-delay: var(--pmt-reveal-delay, 0ms);
+}
+.pmt-reveal.pmt-reveal-pending {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: none;
+}
+
+/* Keyboard and fragment access always take precedence over entrance effects. */
+.pmt-reveal.pmt-reveal-pending:focus-within,
+.pmt-reveal.pmt-reveal-pending:target {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+@media (max-width: 640px) {
+  .pmt-reveal.pmt-reveal-pending { transform: translateY(12px); }
+  .pmt-reveal.pmt-reveal-pending:focus-within,
+  .pmt-reveal.pmt-reveal-pending:target { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pmt-reveal,
+  .pmt-reveal.pmt-reveal-pending {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  .pmt-reveal,
+  .pmt-reveal.pmt-reveal-pending {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

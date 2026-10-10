@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" fill="none">
+<defs><linearGradient id="line" x1="550" y1="900" x2="1800" y2="80" gradientUnits="userSpaceOnUse"><stop stop-color="#95B7D5" stop-opacity="0"/><stop offset=".64" stop-color="#95B7D5" stop-opacity=".32"/><stop offset="1" stop-color="#95B7D5" stop-opacity="0"/></linearGradient><radialGradient id="wash" cx="0" cy="0" r="1" gradientTransform="translate(1680 310) rotate(145) scale(950 510)" gradientUnits="userSpaceOnUse"><stop stop-color="#7198BA" stop-opacity=".16"/><stop offset="1" stop-color="#7198BA" stop-opacity="0"/></radialGradient></defs>
+<path fill="url(#wash)" d="M0 0h1800v1100H0z"/>
+<g stroke="url(#line)" stroke-width="1"><ellipse cx="1400" cy="950" rx="1080" ry="530" transform="rotate(-28 1400 950)"/><ellipse cx="1400" cy="950" rx="1200" ry="600" transform="rotate(-28 1400 950)"/><ellipse cx="1400" cy="950" rx="1320" ry="670" transform="rotate(-28 1400 950)"/></g>
+</svg>
